@@ -1,5 +1,5 @@
 import {Route,Switch} from 'react-router-dom'
-import Checkout from '../Pages/Checkout'
+import CartOverview from '../Pages/CartOverview'
 import Home from '../Pages/Home'
 
 const Routes = () =>{
@@ -9,7 +9,7 @@ const Routes = () =>{
                 <Home/>
             </Route>
             <Route path="/checkout">
-                <Checkout/>
+                <CartOverview/>
             </Route>
         </Switch>
     )

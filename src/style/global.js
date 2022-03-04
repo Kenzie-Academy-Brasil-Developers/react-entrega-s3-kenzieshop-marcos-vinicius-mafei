@@ -7,6 +7,9 @@ export const GlobalStyle = createGlobalStyle`
         --darkOrange: #A34201;
         --strongYellow: #FFAF00;
         --brown: #973700;
+        --midBrown:#7A271C;
+        --lightOrange:#E67A1B;
+        --cleanBlack:#121214;
     }
 
     *{
@@ -17,5 +20,8 @@ export const GlobalStyle = createGlobalStyle`
     body {
         background-color: var(--main);
         font-size: 12px;
+    }
+    figcaption {
+        display: none;
     }
 `
