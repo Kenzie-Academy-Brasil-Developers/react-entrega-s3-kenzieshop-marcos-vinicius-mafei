@@ -4,26 +4,37 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    width: 90%;
     img{
-        width: 80px;
-        height: 100px;
+        width: 70px;
+        height: 80px;
     }
     div{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 20px;
+        gap: 10px;
         margin-top: 15px;
         h4{
-            font-size:16px;
+            font-size:17px;
+            font-family: 'Fira Sans Condensed', sans-serif;
             color:var(--darkOrange) ;
         }
         h5{
-            font-size:13px;
+            font-size:14px;
             color:var(--midBrown) ;
+            font-family: 'Inter', sans-serif;
+        }
+        h6{
+            font-size:12px;
+            color: var(--strongYellow);
         }
     }
     button{
-        margin-top: 15px;
+        margin-top: 19px;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+        color: var(--darkOrange);
     }
 `

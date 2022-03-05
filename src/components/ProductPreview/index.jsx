@@ -1,6 +1,12 @@
 import {Container} from './style'
+import {FaTrashAlt} from 'react-icons/fa'
+import { removeFromCartThunk } from '../../store/modules/cart/thunk'
+import { useDispatch } from 'react-redux'
 
-const ProductPreview = ({name,price,img,product}) => {
+const ProductPreview = ({name,price,img,quantity,product}) => {
+
+    const dispatch = useDispatch()
+
     return(
         <Container>
             <figure>
@@ -9,9 +15,10 @@ const ProductPreview = ({name,price,img,product}) => {
             </figure>
             <div>
                 <h4>{name}</h4>
-                <h5>{price}</h5>
+                <h5>{`R$ ${price}`}</h5>
+                <h6>{`Quantidade: ${quantity}`}</h6>
             </div>
-            <button><span>remove</span></button>
+            <button onClick={()=>{dispatch(removeFromCartThunk(product))}}><FaTrashAlt/></button>
         </Container>
     )
 }

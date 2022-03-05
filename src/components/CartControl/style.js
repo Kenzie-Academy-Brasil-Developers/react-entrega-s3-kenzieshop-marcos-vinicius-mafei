@@ -11,7 +11,7 @@ export const Container = styled.div`
         top: 10px ;
         left: -12px;
         .icon{
-            color: var(--cleanBlack);
+            color: var(--darkOrange);
         }
     }
 `

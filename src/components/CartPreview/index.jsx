@@ -10,8 +10,9 @@ const CartPreview = ({setMousePop}) => {
     return(
         <Container onMouseOver={()=>setMousePop(true)} onMouseOut={()=>setMousePop(false)}>
             <ul>
-                {preview.map(product =><li key={product.name}><ProductPreview name={product.name} price={product.price} img={product.img} product={product}/></li>)}
+                {preview.map(product =><li key={product.name}><ProductPreview name={product.name} price={product.price} img={product.img} quantity={product.quantity} product={product}/></li>)}
             </ul>
+            <button className="full--cart">Ver Carrinho Completo</button>
         </Container>
     )
 }

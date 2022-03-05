@@ -16,7 +16,7 @@ const Product = ({name,price,img,product}) => {
                 <h3>{name}</h3>
                 <h4>{`R$ ${price}`}</h4>
             </div>
-            <button onClick={() => dispatch(addToCartThunk(product))}><span>Add to Cart</span></button>
+            <button onClick={() => dispatch(addToCartThunk(product))}><span>Adicionar ao Carrinho</span></button>
         </Container>
     )
 }
