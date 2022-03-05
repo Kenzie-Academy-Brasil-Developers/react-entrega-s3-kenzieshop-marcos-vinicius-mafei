@@ -9,7 +9,7 @@ const ProductsList = () => {
     return (
         <Container>
             <ul>
-                {list.map((product) => <li key={product.name}><Product name = {product.name} price = {product.price} img={product.img}/></li>)}
+                {list.map((product) => <li key={product.name}><Product name = {product.name} price = {product.price} img={product.img} product={product}/></li>)}
             </ul>
         </Container>
     )

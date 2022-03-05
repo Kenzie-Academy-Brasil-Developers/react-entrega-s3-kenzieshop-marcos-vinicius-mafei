@@ -1,7 +1,11 @@
 import { Container } from "./style"
 import ProductBorder from '../../images/ProductBorder.png'
+import {addToCartThunk} from '../../store/modules/cart/thunk'
+import { useDispatch} from "react-redux"
 
-const Product = ({name,price,img}) => {
+const Product = ({name,price,img,product}) => {
+    const dispatch = useDispatch()
+
     return(
         <Container ProductBorder={ProductBorder}>
             <figure>
@@ -12,7 +16,7 @@ const Product = ({name,price,img}) => {
                 <h3>{name}</h3>
                 <h4>{`R$ ${price}`}</h4>
             </div>
-            <button><span>Add to Cart</span></button>
+            <button onClick={() => dispatch(addToCartThunk(product))}><span>Add to Cart</span></button>
         </Container>
     )
 }
