@@ -2,21 +2,18 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 90%;
+    justify-content:space-between;
+    align-items:flex-start;
     img{
-        width: 70px;
-        height: 80px;
-        border: 1px solid var(--brown);
-        border-radius:2px;
+        width: 100px;
+        border: 2px solid var(--midBrown);
     }
-    div{
+    .container--infos{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 10px;
-        margin-top: 2px;
+        gap: 20px;
+        margin-top: 15px;
         width: 150px;
         h4{
             font-size:17px;
@@ -29,13 +26,30 @@ export const Container = styled.div`
             font-family: 'Inter', sans-serif;
         }
         h6{
-            font-size:12px;
+            font-size:10px;
             color: var(--strongYellow);
             font-family: 'Inter', sans-serif;
         }
+        .quantity--control{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 140px;
+            .add--remove{
+                display: flex;
+                gap:10px;
+                align-items: center;
+                button{
+                    width: 20px;
+                    height: 20px;
+                    margin: 0;
+                    border: 1px solid var(--darkOrange);
+                }
+            }
+        }
     }
     button{
-        margin-top: 5px;
+        margin-top: 18px;
         cursor: pointer;
         background-color: transparent;
         border: 0;

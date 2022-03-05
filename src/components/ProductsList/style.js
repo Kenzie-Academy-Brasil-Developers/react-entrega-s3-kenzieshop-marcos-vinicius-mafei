@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   justify-content:center;
   padding-bottom:30px;
-  padding-top:30px;
+  padding-top:100px;
   ul{
     display: flex;
     flex-direction: column;

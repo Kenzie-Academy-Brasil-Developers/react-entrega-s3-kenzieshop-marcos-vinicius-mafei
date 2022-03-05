@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
 export const FancyHeader = styled.header`
+    width: 100vw;
+    position: fixed;
+    background-color: var(--main);
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -15,5 +18,16 @@ export const FancyHeader = styled.header`
     }
     img{
         width: 150px;
+    }
+    nav{
+        a{
+            text-decoration: none;
+            color: var(--lightOrange);
+            display: flex;
+            align-items:flex-end;
+            font-family:'Inter', sans-serif;
+            font-weight:bold;
+            gap:5px;
+        }
     }
 `

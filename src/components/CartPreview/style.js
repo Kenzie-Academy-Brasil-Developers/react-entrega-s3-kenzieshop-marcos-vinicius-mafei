@@ -36,3 +36,29 @@ export const Container = styled.div`
         width: 300px;
     }
 `
+
+export const EmptyCart = styled.div`
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 15px;
+    font-family: 'Inter', sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    padding-bottom:15px;
+    h2{
+        font-size: 22px;
+        color: var(--strongYellow);
+    }
+    h3{
+        font-size: 18px;
+        color: var(--darkOrange)
+    }
+    h4{
+        font-size: 15px;
+        color: var(--lightOrange)
+    }
+`
