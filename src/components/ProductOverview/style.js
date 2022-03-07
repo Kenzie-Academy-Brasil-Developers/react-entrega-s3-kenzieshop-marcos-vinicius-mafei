@@ -4,9 +4,13 @@ export const Container = styled.div`
     display: flex;
     justify-content:space-between;
     align-items:flex-start;
-    img{
+    figure{
+        height:127.39px;
+        img{
         width: 100px;
+        height:127.4px;
         border: 2px solid var(--midBrown);
+    }
     }
     .container--infos{
         display: flex;
@@ -57,11 +61,18 @@ export const Container = styled.div`
         background-color: transparent;
         border: 0;
         color: var(--darkOrange);
+        &:hover{
+            color: var(--strongYellow);
+        }
     }
 
     @media screen and (min-width: 1000px){
-        img{
-            width:120px;
+        figure{
+            height: 154px;
+            img{
+                width:120px;
+                height:153px;
+        }
         }
         .container--infos{
             width: 200px;

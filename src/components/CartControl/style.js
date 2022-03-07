@@ -3,6 +3,15 @@ import styled from 'styled-components'
 export const Container = styled.div`
     padding: 2px;
     position: relative;
+    cursor: pointer;
+    @keyframes popup{
+        from { opacity:0}
+        to { opacity:1}
+    }
+    @keyframes hide{
+        from { opacity:1}
+        to { opacity:0}
+    }
     .cart--counter{
         width: 15px;
         height: 15px;
@@ -21,12 +30,14 @@ export const Container = styled.div`
     .cart{
         color: var(--lightOrange);
     }
-    .arrow{
+    .cart--popup{
+        .arrow{
         position: absolute;
         top: 10px ;
         left: -12px;
         .icon{
             color: var(--darkOrange);
         }
+    }
     }
 `

@@ -8,6 +8,7 @@ export const Container = styled.div`
     padding-top: 10px;
     background-color: var(--cleanBlack);
     border: 2px solid var(--darkOrange);
+    cursor: default;
     ul{
         display: flex;
         flex-direction: column;
@@ -31,6 +32,12 @@ export const Container = styled.div`
         text-transform: uppercase;
         font-family: 'Fira Sans Condensed', sans-serif;
         font-size:16px;
+        cursor: pointer;
+        transition: 0.6s;
+        &:hover{
+            background-color: var(--lightOrange);
+            transition: 0.6s;
+        }
     }
     @media screen and (min-width:900px){
         width: 300px;

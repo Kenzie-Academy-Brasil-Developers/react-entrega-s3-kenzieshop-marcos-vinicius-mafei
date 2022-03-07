@@ -13,7 +13,7 @@ const ProductPreview = ({name,price,img,quantity,product,calculateTotal}) => {
                 <img src={img} alt={name} />
                 <figcaption>{name}</figcaption>
             </figure>
-            <div>
+            <div className="infos">
                 <h4>{name}</h4>
                 <h5>{`R$ ${price}`}</h5>
                 <h6>{`Quantidade: ${quantity}`}</h6>

@@ -11,7 +11,7 @@ export const Container = styled.div`
         border: 1px solid var(--brown);
         border-radius:2px;
     }
-    div{
+    .infos{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -40,5 +40,8 @@ export const Container = styled.div`
         background-color: transparent;
         border: 0;
         color: var(--darkOrange);
+        &:hover{
+            color: var(--strongYellow);
+        }
     }
 `

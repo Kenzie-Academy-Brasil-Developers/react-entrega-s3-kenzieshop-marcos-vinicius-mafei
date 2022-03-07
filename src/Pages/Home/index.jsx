@@ -2,6 +2,7 @@ import ProductsList from "../../components/ProductsList"
 import Header from "../../components/Header"
 import { useState } from "react"
 import { useSelector } from "react-redux"
+import {motion} from 'framer-motion'
 
 const Home = () =>{
 
@@ -14,10 +15,17 @@ const Home = () =>{
     }
 
     return (
-        <div>
-            <Header count={count} calculateTotal={calculateTotal}/>
-            <ProductsList calculateTotal={calculateTotal}/>
-        </div>
+        <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            transition={{duration:1.5}}
+        >
+            <div>
+                <Header count={count} calculateTotal={calculateTotal}/>
+                <ProductsList calculateTotal={calculateTotal}/>
+            </div>
+        </motion.div>
     )
 }
 

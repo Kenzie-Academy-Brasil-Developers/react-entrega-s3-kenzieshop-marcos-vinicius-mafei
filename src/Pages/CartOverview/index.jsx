@@ -4,6 +4,7 @@ import Cart from "../../components/Cart"
 import Header from "../../components/Header"
 import Total from "../../components/Total"
 import {Container} from './style'
+import {motion} from 'framer-motion'
 
 const CartOverview = () => {
 
@@ -16,13 +17,20 @@ const CartOverview = () => {
     }
 
     return(
-        <div>
-            <Header checkout/>
-            <Container>
-                <Cart calculateTotal={calculateTotal}/>
-                <Total total={total}/>
-            </Container>
-        </div>
+        <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            transition={{duration:1.5}}
+        >
+            <div>
+                <Header checkout/>
+                <Container>
+                    <Cart calculateTotal={calculateTotal}/>
+                    <Total total={total}/>
+                </Container>
+            </div>
+        </motion.div>
     )
 }
 

@@ -28,6 +28,11 @@ export const FancyHeader = styled.header`
             font-family:'Inter', sans-serif;
             font-weight:bold;
             gap:5px;
+            transition: 0.6s;
+            &:hover{
+                color: var(--strongYellow);
+                transition: 0.6s;
+            }
         }
     }
 `

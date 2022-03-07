@@ -1,4 +1,5 @@
 import { BsFillBagCheckFill } from "react-icons/bs";
+import { toast } from "react-toastify";
 import {Container} from './style'
 
 const Total = ({total}) => {
@@ -11,7 +12,7 @@ const Total = ({total}) => {
                 <h2>Checkout</h2>
             </div>
             <h1>{`Valor Total : R$ ${total}`}</h1>
-            <button>Finalizar pedido</button>
+            <button onClick={()=>{toast.success('Talvez em um futuro próximo 😉',{theme:'dark'})}}>Finalizar pedido</button>
         </Container>
     )
 }

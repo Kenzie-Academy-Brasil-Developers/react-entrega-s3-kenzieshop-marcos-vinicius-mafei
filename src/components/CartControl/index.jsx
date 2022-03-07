@@ -8,15 +8,19 @@ const CartControl = ({count,calculateTotal}) => {
 
 
     const [showPreview,setShowPreview] = useState(false)
+    
+    const [anime,setAnime] = useState('popup 1s')
 
     const [mouseIcon,setMouseIcon] = useState(false)
     const [mousePop,setMousePop] = useState(false)
 
     useEffect(()=>{
         if(mouseIcon || mousePop){
-            setShowPreview(true)
+            setAnime('popup 0.6s')
+            setTimeout(()=>setShowPreview(true),100)
         }else{
-            setShowPreview(false)
+            setAnime('hide 0.6s')
+            setTimeout(()=>setShowPreview(false),400)
         }
     },[mouseIcon,mousePop])
 
@@ -24,7 +28,7 @@ const CartControl = ({count,calculateTotal}) => {
         <Container onMouseOver={()=>setMouseIcon(true)} onMouseLeave={()=>setMouseIcon(false)}>
             <div className="cart--counter">{count}</div>
             <BsCart3 size={'20px'} className='cart'/>
-            {showPreview && <div className="cart--popup"><div className='arrow'><IoMdArrowDropup size={'50px'} className='icon'/></div><CartPreview setMousePop={setMousePop} calculateTotal={calculateTotal}/></div>}
+            {showPreview && <div className="cart--popup" style={{animation:anime}} ><div className='arrow'><IoMdArrowDropup size={'50px'} className='icon'/></div><CartPreview setMousePop={setMousePop} calculateTotal={calculateTotal}/></div>}
         </Container>
     )
 }

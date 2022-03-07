@@ -10,6 +10,23 @@ export const GlobalStyle = createGlobalStyle`
         --midBrown:#7A271C;
         --lightOrange:#E67A1B;
         --cleanBlack:#121214;
+        --toastify-color-success: #E67A1B;
+        --toastify-color-dark: #222;
+        --toastify-toast-min-height: 70px;
+        --toastify-text-color-dark: #E67A1B;
+        --toastify-font-family: 'Inter', sans-serif;
+        ::-webkit-scrollbar {
+        width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+        background: var(--cleanBlack); 
+        }
+        ::-webkit-scrollbar-thumb {
+        background: var(--lightOrange); 
+        }
+        ::-webkit-scrollbar-thumb:hover {
+        background: var(--brown); 
+        }
     }
 
     *{

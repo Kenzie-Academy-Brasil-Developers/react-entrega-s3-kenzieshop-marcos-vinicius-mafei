@@ -2,6 +2,7 @@ import { Container } from "./style"
 import ProductBorder from '../../images/ProductBorder.png'
 import {addToCartThunk} from '../../store/modules/cart/thunk'
 import { useDispatch} from "react-redux"
+import { toast } from "react-toastify"
 
 const Product = ({name,price,img,product,calculateTotal}) => {
     const dispatch = useDispatch()
@@ -17,7 +18,8 @@ const Product = ({name,price,img,product,calculateTotal}) => {
                 <h4>{`R$ ${price}`}</h4>
             </div>
             <button onClick={() => {dispatch(addToCartThunk(product))
-            calculateTotal()}}><span>Adicionar ao Carrinho</span></button>
+            calculateTotal()
+            toast.success(`${name} foi adicionado ao carrinho`,{autoClose:2000,theme:'dark'})}}><span>Adicionar ao Carrinho</span></button>
         </Container>
     )
 }

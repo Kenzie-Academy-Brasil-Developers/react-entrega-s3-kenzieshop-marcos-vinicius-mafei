@@ -41,6 +41,12 @@ export const Container = styled.div`
         font-size:16px ;
         font-weight:bold ;
         font-family: 'Inter', sans-serif;
+        cursor: pointer;
+        transition: 0.6s;
+        &:hover{
+            background-color: var(--lightOrange);
+            transition: 0.6s;
+        }
     }
     @media screen and (min-width:480px){
         width: 450px;
