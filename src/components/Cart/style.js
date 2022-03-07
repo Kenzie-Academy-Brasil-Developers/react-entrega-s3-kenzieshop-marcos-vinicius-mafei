@@ -32,8 +32,46 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         gap: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        li:not(li:last-child){
+            border-bottom: 1px solid var(--lightOrange);
+            padding-bottom: 15px;
+        }
     }
-
+    @media screen and (min-width: 480px){
+        width: 450px;
+        ul{
+            align-items: center;
+            li{
+                width: 80%;
+            }
+        }
+    }
+    @media screen and (min-width: 768px){
+        width: 350px;
+        ul{
+            li{
+                width: 100%;
+            }
+        }
+    }
+    @media screen and (min-width: 900px){
+        width: 400px;
+        ul{
+            li{
+                width: 80%;
+            }
+        }
+    }
+    @media screen and (min-width: 1000px){
+        width: 500px;
+        ul{
+            li{
+                width: 90%;
+            }
+        }
+    }
 `
 
 export const EmptyCart = styled.div`

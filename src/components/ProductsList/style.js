@@ -15,4 +15,26 @@ export const Container = styled.div`
       width: 280px;
     }
   }
+  @media screen and (min-width: 740px) {
+      ul{
+        flex-direction: row;
+        width: 580px;
+        flex-wrap: wrap;
+      }
+  }
+  @media screen and (min-width:1120px){
+      ul{
+        width: 880px;
+      }
+  }
+  @media screen and (min-width:1500px){
+      ul{
+        width: 1180px;
+      }
+  }
+  @media screen and (min-width:1900px){
+      ul{
+        width: 1480px;
+      }
+  }
 `

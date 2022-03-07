@@ -4,6 +4,8 @@ import { removeFromCartThunk } from '../../store/modules/cart/thunk'
 import { useDispatch,useSelector } from 'react-redux'
 import { removeWithQuantity,addToCartThunk } from '../../store/modules/cart/thunk'
 import { useState } from 'react'
+import { HiPlus,HiMinusSm } from "react-icons/hi";
+
 
 const ProductOverview = ({name,price,img,quantity,product,calculateTotal}) => {
 
@@ -31,10 +33,10 @@ const ProductOverview = ({name,price,img,quantity,product,calculateTotal}) => {
                     <div className="add--remove">
                         <button onClick={()=>{dispatch(removeWithQuantity(product))
                         updateQuantity()
-                        calculateTotal()}}>-</button>
+                        calculateTotal()}}><HiMinusSm/></button>
                         <button onClick={()=>{dispatch(addToCartThunk(product))
                         updateQuantity()
-                        calculateTotal()}}>+</button>
+                        calculateTotal()}}><HiPlus/></button>
                     </div>
                 </div>
             </div>

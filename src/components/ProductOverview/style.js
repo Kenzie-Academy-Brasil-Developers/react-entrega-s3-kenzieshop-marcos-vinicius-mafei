@@ -44,6 +44,9 @@ export const Container = styled.div`
                     height: 20px;
                     margin: 0;
                     border: 1px solid var(--darkOrange);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
             }
         }
@@ -54,5 +57,27 @@ export const Container = styled.div`
         background-color: transparent;
         border: 0;
         color: var(--darkOrange);
+    }
+
+    @media screen and (min-width: 1000px){
+        img{
+            width:120px;
+        }
+        .container--infos{
+            width: 200px;
+            gap: 30px;
+            h4{
+            font-size:20px;
+            }
+            h5{
+                font-size:18px;
+            }
+            h6{
+                font-size:14px;
+            }
+            .quantity--control{
+                width: 200px;
+            }
+        }
     }
 `

@@ -4,7 +4,7 @@ import CartControl from '../CartControl'
 import {Link} from 'react-router-dom'
 import { AiOutlineHome } from "react-icons/ai";
 
-const Header = ({checkout = false}) =>{
+const Header = ({checkout = false,count,calculateTotal}) =>{
     return(
         <FancyHeader>
             <div className="container">
@@ -13,7 +13,7 @@ const Header = ({checkout = false}) =>{
                     <figcaption>logo Kenzie Games</figcaption>
                 </figure>
                 <nav>
-                    {checkout? <Link to="/">Home <AiOutlineHome size="20px"/></Link> : <CartControl/>}
+                    {checkout? <Link to="/">Home <AiOutlineHome size="20px"/></Link> : <CartControl count={count} calculateTotal={calculateTotal}/>}
                 </nav>
             </div>
         </FancyHeader>

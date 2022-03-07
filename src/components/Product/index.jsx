@@ -3,7 +3,7 @@ import ProductBorder from '../../images/ProductBorder.png'
 import {addToCartThunk} from '../../store/modules/cart/thunk'
 import { useDispatch} from "react-redux"
 
-const Product = ({name,price,img,product}) => {
+const Product = ({name,price,img,product,calculateTotal}) => {
     const dispatch = useDispatch()
 
     return(
@@ -16,7 +16,8 @@ const Product = ({name,price,img,product}) => {
                 <h3>{name}</h3>
                 <h4>{`R$ ${price}`}</h4>
             </div>
-            <button onClick={() => dispatch(addToCartThunk(product))}><span>Adicionar ao Carrinho</span></button>
+            <button onClick={() => {dispatch(addToCartThunk(product))
+            calculateTotal()}}><span>Adicionar ao Carrinho</span></button>
         </Container>
     )
 }

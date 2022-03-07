@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom"
 import ProductPreview from "../ProductPreview"
 import {Container,EmptyCart} from './style'
 
-const CartPreview = ({setMousePop}) => {
+const CartPreview = ({setMousePop,calculateTotal}) => {
 
     const history = useHistory()
     const cart = useSelector((state)=>state.cart)
@@ -12,7 +12,7 @@ const CartPreview = ({setMousePop}) => {
     return(
         <Container onMouseOver={()=>setMousePop(true)} onMouseOut={()=>setMousePop(false)}>
             {preview.length > 0 ?<><ul>
-                {preview.map(product =><li key={product.name}><ProductPreview name={product.name} price={product.price} img={product.img} quantity={product.quantity}product={product}/></li>)}
+                {preview.map(product =><li key={product.name}><ProductPreview name={product.name} price={product.price} img={product.img} quantity={product.quantity} product={product} calculateTotal={calculateTotal}/></li>)}
             </ul>
             <button className="full--cart" onClick={()=>history.push('/checkout')}>Ver Carrinho Completo</button>
             </>
